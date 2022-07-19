@@ -1,0 +1,59 @@
+import styled from "styled-components";
+
+export const ContainerHeader = styled.section`
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+ 
+`
+export const ImgLogo = styled.img`
+    width: 19.188rem;
+    height: 7.06rem;
+    position: absolute;
+`
+export const ButtonPokedex = styled.button `
+    font-family: 'Poppins', sans-serif;
+    background-color: #33A4F5;
+    font-style: normal;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 36px;
+    border-radius: 8px;
+    border: none;
+    width: 17.938rem;
+    height: 4.625rem;
+    margin-left: 80%;
+    cursor: pointer;
+`
+export const ButtonBack = styled.button`
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration-line: underline;
+    color: #1A1A1A;
+    background-color: transparent;
+    border: none;
+    margin-right: 70%;
+    cursor: pointer;
+`
+export const ButtonDel = styled.button`
+    background: #FF6262;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    width: 14.125rem;
+    height: 3.563rem;
+    align-items: center;
+    padding: 4px 10px;
+    cursor: pointer;
+    border: none;
+    color: #FFFFFF;
+`
+
+
