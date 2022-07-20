@@ -1,17 +1,34 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.section`
-    display: flex;
     width: 100%;
     height: 10rem;
+    display: flex;
     align-items: center;
-    justify-content: center;
- 
 `
+
+export const Nav = styled.nav`
+    padding: 0.5rem;
+    flex-grow: 1;
+    align-items: center;
+`
+export const NavList = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li:nth-of-type(3){
+        margin-left:auto;
+    }
+    li:nth-of-type(2){
+        margin-left:auto;
+    }
+`
+
 export const ImgLogo = styled.img`
     width: 19.188rem;
     height: 7.06rem;
-    position: absolute;
 `
 export const ButtonPokedex = styled.button `
     font-family: 'Poppins', sans-serif;
@@ -25,7 +42,6 @@ export const ButtonPokedex = styled.button `
     border: none;
     width: 17.938rem;
     height: 4.625rem;
-    margin-left: 80%;
     cursor: pointer;
 `
 export const ButtonBack = styled.button`
@@ -36,7 +52,6 @@ export const ButtonBack = styled.button`
     color: #1A1A1A;
     background-color: transparent;
     border: none;
-    margin-right: 70%;
     cursor: pointer;
 `
 export const ButtonDel = styled.button`
