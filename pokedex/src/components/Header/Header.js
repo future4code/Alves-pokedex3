@@ -40,8 +40,6 @@ const Header = () => {
                     <li><ImgLogo src={Logo} alt='Logo Pokemon' /></li>
                     <li>{defineButtonRight()}</li>
                 </NavList>
-
-
             </Nav>
 
         </ContainerHeader>
