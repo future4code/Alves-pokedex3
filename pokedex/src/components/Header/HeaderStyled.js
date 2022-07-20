@@ -20,6 +20,7 @@ export const NavList = styled.ul`
     align-items: center;
     li:nth-of-type(3){
         margin-left:auto;
+        
     }
     li:nth-of-type(2){
         margin-left:auto;
