@@ -1,19 +1,18 @@
-import React, {useContext, useState} from 'react'
+import React, { useContext, useState } from 'react'
 import GlobalContext from '../../global/GlobalContext'
 // import { goToPokedex } from '../../routes/coordinator'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import Card from '../../components/Card/Card'
-import { HomeContainer, Titles } from './HomePageStyled'
+import { CardsContainer, HomeContainer, Titles } from './HomePageStyled'
 
 
 const HomePage = () => {
 
-   
+
   return (
     <HomeContainer>
       <Titles>Todos Pokémons</Titles>
-        <Card/>
-        
+        <Card />
     </HomeContainer>
   )
 }

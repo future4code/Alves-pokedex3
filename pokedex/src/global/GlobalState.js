@@ -8,13 +8,13 @@ const GlobalState = (props) => {
 
     const [pokemonList, setPokemonList] = useState([])
     const [pokemonDetail, setPokemonDetail] = useState([])
+    const [pokedex, setPokedex] = useState([])
+    // const []
     const Provider = GlobalContext.Provider
 
     useEffect(() => {
         getPokeList()
     },[])
-    
-
     
     
     useEffect (() => {
