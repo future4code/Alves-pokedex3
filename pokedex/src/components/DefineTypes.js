@@ -18,121 +18,121 @@ import Rock from '../assets/rock.png'
 import Steel from '../assets/steel.png'
 import Water from '../assets/water.png'
 
-import { ImgType} from './Card/CardStyle'
-const DefineTypes = ({pokemonType}) => {
+import { ImgType } from './Card/CardStyle'
+const DefineTypes = ({ pokemonType }) => {
 
-    if(pokemonType === "poison") {
-        return(
+    if (pokemonType === "poison") {
+        return (
             <>
                 <ImgType src={Poison} />
             </>
         )
-    }if(pokemonType === "bug") {
-        return(
+    } if (pokemonType === "bug") {
+        return (
             <>
                 <ImgType src={Bug} />
             </>
         )
-    }if(pokemonType === "dark") {
-        return(
+    } if (pokemonType === "dark") {
+        return (
             <>
                 <ImgType src={Dark} />
             </>
         )
-    }if(pokemonType === "dragon") {
-        return(
+    } if (pokemonType === "dragon") {
+        return (
             <>
                 <ImgType src={Dragon} />
             </>
         )
-    }if(pokemonType === "eletric") {
-        return(
+    } if (pokemonType === "eletric") {
+        return (
             <>
                 <ImgType src={Eletric} />
             </>
         )
-    }if(pokemonType === "fairy") {
-        return(
+    } if (pokemonType === "fairy") {
+        return (
             <>
                 <ImgType src={Fairy} />
             </>
         )
-    }if(pokemonType === "fighting") {
-        return(
+    } if (pokemonType === "fighting") {
+        return (
             <>
                 <ImgType src={Fighting} />
             </>
         )
-    }if(pokemonType === "fire") {
-        return(
+    } if (pokemonType === "fire") {
+        return (
             <>
                 <ImgType src={Fire} />
             </>
         )
-    }if(pokemonType === "flying") {
-            return(
-                <>
-                    <ImgType src={Flying} />
-                </>
+    } if (pokemonType === "flying") {
+        return (
+            <>
+                <ImgType src={Flying} />
+            </>
         )
-    }if(pokemonType === "ghost") {
-        return(
+    } if (pokemonType === "ghost") {
+        return (
             <>
                 <ImgType src={Ghost} />
             </>
         )
-    }if(pokemonType === "grass") {
-        return(
+    } if (pokemonType === "grass") {
+        return (
             <>
                 <ImgType src={Grass} />
             </>
         )
-    }if(pokemonType === "ground") {
-        return(
+    } if (pokemonType === "ground") {
+        return (
             <>
                 <ImgType src={Ground} />
             </>
         )
-    }if(pokemonType === "ice") {
-        return(
+    } if (pokemonType === "ice") {
+        return (
             <>
                 <ImgType src={Ice} />
             </>
         )
-    }if(pokemonType === "normal") {
-        return(
+    } if (pokemonType === "normal") {
+        return (
             <>
                 <ImgType src={Normal} />
             </>
         )
-    }if(pokemonType === "psychic") {
-        return(
+    } if (pokemonType === "psychic") {
+        return (
             <>
                 <ImgType src={Psychic} />
             </>
         )
-    }if(pokemonType === "rock") {
-        return(
+    } if (pokemonType === "rock") {
+        return (
             <>
                 <ImgType src={Rock} />
             </>
         )
-    }if(pokemonType === "steel") {
-        return(
+    } if (pokemonType === "steel") {
+        return (
             <>
                 <ImgType src={Steel} />
             </>
         )
-    }if(pokemonType === "water") {
-        return(
+    } if (pokemonType === "water") {
+        return (
             <>
                 <ImgType src={Water} />
             </>
         )
     }
-  return (
-    <>DefineTypes</>
-  )
+    return (
+        <>DefineTypes</>
+    )
 }
 
 export default DefineTypes
