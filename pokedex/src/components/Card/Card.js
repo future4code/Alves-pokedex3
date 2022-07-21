@@ -9,12 +9,27 @@ import { CardsContainer } from '../../pages/HomePage/HomePageStyled'
 
 const Card = () => {
     const navigate = useNavigate()
-    const { pokemonList, pokemonDetail,   } = useContext(GlobalContext)
+    const { pokemonList, setPokemonList, pokemonDetail, setPokemonDetail, pokedex, setPokedex} = useContext(GlobalContext)
     
 
-    const showPokemons = pokemonDetail?.map((pokemon) => {
+    const capturPokemon = (newPokemon, id) => {
+        setPokemonDetail(pokemonDetail.filter(pokemon => pokemon.name !== newPokemon.name))
+        const newPokedex = [...pokedex, newPokemon]
+        setPokedex(newPokedex)
+        localStorage.setItem(`key ${id}`, id)
+        localStorage.setItem("pokedex", JSON.stringify(newPokedex))
+    }
+
+    const showPokemons = pokemonDetail?.filter((pokemon) => {
+        const id = localStorage.getItem(`key ${pokemon.id}`)
+        if(id === `${pokemon.id}`) {
+            return false
+        } else {
+            return true
+        }
+    }).map((pokemon) => {
         return (
-            <ContainerCard key={pokemon.name}>
+            <ContainerCard typePokemon = {pokemon.types[0].type.name}  key={pokemon.name}>
                 <ContainerFirstColumn>
                     <H3> #{pokemon.id}</H3>
                     <H2>{pokemon.name}</H2>
@@ -30,7 +45,7 @@ const Card = () => {
                 </ContainerFirstColumn>
                 <ConatinerSecondColumn>
                         <ImgCard src={pokemon["sprites"]["other"]["official-artwork"]["front_default"]} />
-                    <ButtonCaptur>Capturar!</ButtonCaptur>
+                    <ButtonCaptur onClick={() => {capturPokemon(pokemon, pokemon.id)}} >Capturar!</ButtonCaptur>
                 </ConatinerSecondColumn>
             </ContainerCard>
         )
