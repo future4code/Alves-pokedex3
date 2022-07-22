@@ -2,23 +2,13 @@ import React, { useContext, useState } from 'react'
 import GlobalContext from '../../global/GlobalContext'
 import { useNavigate } from 'react-router-dom'
 import { goToDetail } from '../../routes/coordinator'
-import { ButtonCaptur, ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard, } from './CardStyle'
+import { CardsContainer, ButtonCaptur, ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard, } from './CardStyle'
 import DefineTypes from '../DefineTypes'
-import { CardsContainer } from '../../pages/HomePage/HomePageStyled'
 
 const Card = () => {
 
     const navigate = useNavigate()
-    const { pokemonList, setPokemonList, pokemonDetail, setPokemonDetail, pokedex, setPokedex } = useContext(GlobalContext)
-
-
-    const capturPokemon = (newPokemon, id) => {
-        setPokemonDetail(pokemonDetail.filter(pokemon => pokemon.name !== newPokemon.name))
-        const newPokedex = [...pokedex, newPokemon]
-        setPokedex(newPokedex)
-        localStorage.setItem(`key ${id}`, id)
-        localStorage.setItem("pokedex", JSON.stringify(newPokedex))
-    }
+    const { pokemonDetail, capturPokemon } = useContext(GlobalContext)
 
         const showPokemons = pokemonDetail?.filter((pokemon) => {
             const id = localStorage.getItem(`key ${pokemon.id}`)

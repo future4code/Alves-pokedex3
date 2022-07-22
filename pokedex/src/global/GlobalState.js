@@ -19,12 +19,12 @@ const GlobalState = (props) => {
             .then((res) => {
                 // console.log(res)
                 pokemons.push(res.data)
-                if(pokemons.length === 20){
+                if(pokemons.length === 30){
                     const orderList = pokemons.sort((a, b) => {
                         return a.id - b.id
                     })
                     setPokemonDetail(orderList)
-                console.log(pokemons) 
+                // console.log(pokemons) 
                 }
             })
             .catch((err) => {
@@ -40,11 +40,10 @@ const GlobalState = (props) => {
         newPokedex && setPokedex(newPokedex)
     },[])
 
-    const getPokeList = () => {
-      axios.get(`${BASE_URL}/pokemon?limit=20&offset=0`)
+    const getPokeList = (pageValue) => {
+      axios.get(`${BASE_URL}/pokemon?limit=30&offset=${pageValue}`)
       .then((res) => {
         setPokemonList(res.data.results)
-        // console.log(res)
         
       }) 
       .catch((err) => {
@@ -52,6 +51,21 @@ const GlobalState = (props) => {
       })  
 
     }
+
+    const capturPokemon = (newPokemon, id) => {
+        setPokemonDetail(pokemonDetail.filter(pokemon => pokemon.name !== newPokemon.name))
+        const newPokedex = [...pokedex, newPokemon]
+        setPokedex(newPokedex)
+        localStorage.setItem(`key ${id}`, id)
+        localStorage.setItem("pokedex", JSON.stringify(newPokedex))
+    }
+
+    const removePokemon = (newPokemon, id) => {
+        setPokedex(pokedex.filter(pokemon => newPokemon.name !== pokemon.name))
+        setPokemonDetail([newPokemon, ...pokemonDetail])
+        localStorage.removeItem(`key ${id}`)
+    }
+
     const values = {
         pokemonList,
         pokemonDetail,
@@ -60,11 +74,10 @@ const GlobalState = (props) => {
         setPokemonList,
         setPokemonDetail,
         getPokeList,
-        getPokemonsDetail
+        getPokemonsDetail,
+        capturPokemon,
+        removePokemon
     }
-
-    // paginação usar o offset como parametro
-
 
     return (
         <Provider value={values}>

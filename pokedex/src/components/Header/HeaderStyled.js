@@ -30,6 +30,7 @@ export const NavList = styled.ul`
 export const ImgLogo = styled.img`
     width: 19.188rem;
     height: 7.06rem;
+    cursor: pointer;
 `
 export const ButtonPokedex = styled.button `
     font-family: 'Poppins', sans-serif;
