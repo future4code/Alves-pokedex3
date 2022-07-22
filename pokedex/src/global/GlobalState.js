@@ -24,7 +24,7 @@ const GlobalState = (props) => {
                         return a.id - b.id
                     })
                     setPokemonDetail(orderList)
-                console.log(pokemons) 
+                // console.log(pokemons) 
                 }
             })
             .catch((err) => {

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import GlobalContext from '../../global/GlobalContext'
-import { goToHomeNext } from '../../routes/coordinator'
+import { goToHomeNext, goToHomeBack } from '../../routes/coordinator'
 import { useNavigate, useParams } from 'react-router-dom'
 import Card from '../../components/Card/Card'
 import { CardsContainer, ContainerPagination, HomeContainer, Titles } from './HomePageStyled'
@@ -21,17 +21,13 @@ const HomePage = () => {
     getPokeList(params.number)
   },[navigate])
   
-  // useEffect(() => {
-  //   getPokeList()
-  // },[])
-
   return (
     <HomeContainer> 
       <Titles>Todos Pokémons</Titles>
         <Card />
         <ContainerPagination>
-          <a onClick={() => goToHomeNext(navigate, +params.number - +30)}>&lt;</a>
-          <a onClick={() => goToHomeNext(navigate, 1)}>1</a>
+          <a onClick={() => goToHomeBack(navigate, +params.number - +30)}>&lt;</a>
+          <a onClick={() => goToHomeNext(navigate, 0)}>1</a>
           <a onClick={() => goToHomeNext(navigate, 30)}>2</a>
           <a onClick={() => goToHomeNext(navigate, 60)}>3</a>
           <a onClick={() => goToHomeNext(navigate, 90)}>4</a>

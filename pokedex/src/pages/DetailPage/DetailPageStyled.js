@@ -14,10 +14,10 @@ export const Titles = styled.h1`
     color: #FFFFFF;
 `
 export const ContainerPokemon = styled.section`
+    display: flex;
     width: 86.821rem;
     height: 41.438rem;
-    border: 1px red solid;
-    ${props => console.log('props', props)}
+    border-radius: 12px;
     background-color: ${props => props.typePokemon === "grass" && "#729F92;"};
     background-color: ${props => props.typePokemon === "fire" && "#EAAB7D;"};
     background-color: ${props => props.typePokemon === "water" && "#71C3FF;"};
@@ -36,4 +36,32 @@ export const ContainerPokemon = styled.section`
     background-color: ${props => props.typePokemon === "steel" && "#B7B9D0"};
     background-color: ${props => props.typePokemon === "dark" && "#55433C"};
     background-color: ${props => props.typePokemon === "flying" && "#A891EC"};
+`
+
+export const BigContainerSmall = styled.section`
+    display: flex;
+    flex-direction: column;
+    
+`
+
+export const ContainerImgSmall = styled.section`
+    width: 17.625rem;
+    height: 17.625rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const ImgSmall = styled.img`
+    width: 10rem;
+    height: 10rem;
+`
+
+export const ContainerStats = styled.section`
+    width: 21.438rem;
+    height: 38.313rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
 `
