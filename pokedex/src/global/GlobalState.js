@@ -41,7 +41,7 @@ const GlobalState = (props) => {
     },[])
 
     const getPokeList = (pageValue) => {
-      axios.get(`${BASE_URL}/pokemon?limit=201&offset=${pageValue}`)
+      axios.get(`${BASE_URL}/pokemon?limit=30&offset=${pageValue}`)
       .then((res) => {
         setPokemonList(res.data.results)
         
@@ -52,9 +52,19 @@ const GlobalState = (props) => {
 
     }
 
+    const capturPokemon = (newPokemon, id) => {
+        setPokemonDetail(pokemonDetail.filter(pokemon => pokemon.name !== newPokemon.name))
+        const newPokedex = [...pokedex, newPokemon]
+        setPokedex(newPokedex)
+        localStorage.setItem(`key ${id}`, id)
+        localStorage.setItem("pokedex", JSON.stringify(newPokedex))
+    }
 
-
-
+    const removePokemon = (newPokemon, id) => {
+        setPokedex(pokedex.filter(pokemon => newPokemon.name !== pokemon.name))
+        setPokemonDetail([newPokemon, ...pokemonDetail])
+        localStorage.removeItem(`key ${id}`)
+    }
 
     const values = {
         pokemonList,
@@ -64,10 +74,10 @@ const GlobalState = (props) => {
         setPokemonList,
         setPokemonDetail,
         getPokeList,
-        getPokemonsDetail
+        getPokemonsDetail,
+        capturPokemon,
+        removePokemon
     }
-
-
 
     return (
         <Provider value={values}>

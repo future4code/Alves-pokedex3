@@ -8,16 +8,7 @@ import DefineTypes from '../DefineTypes'
 const Card = () => {
 
     const navigate = useNavigate()
-    const { pokemonList, setPokemonList, pokemonDetail, setPokemonDetail, pokedex, setPokedex } = useContext(GlobalContext)
-
-
-    const capturPokemon = (newPokemon, id) => {
-        setPokemonDetail(pokemonDetail.filter(pokemon => pokemon.name !== newPokemon.name))
-        const newPokedex = [...pokedex, newPokemon]
-        setPokedex(newPokedex)
-        localStorage.setItem(`key ${id}`, id)
-        localStorage.setItem("pokedex", JSON.stringify(newPokedex))
-    }
+    const { pokemonDetail, capturPokemon } = useContext(GlobalContext)
 
         const showPokemons = pokemonDetail?.filter((pokemon) => {
             const id = localStorage.getItem(`key ${pokemon.id}`)

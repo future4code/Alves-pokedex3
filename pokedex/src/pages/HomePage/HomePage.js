@@ -3,7 +3,7 @@ import GlobalContext from '../../global/GlobalContext'
 import { goToHomeNext } from '../../routes/coordinator'
 import { useNavigate, useParams } from 'react-router-dom'
 import Card from '../../components/Card/Card'
-import { CardsContainer, HomeContainer, Titles } from './HomePageStyled'
+import { CardsContainer, ContainerPagination, HomeContainer, Titles } from './HomePageStyled'
 
 
 
@@ -26,19 +26,21 @@ const HomePage = () => {
   // },[])
 
   return (
-    <HomeContainer>
-              
-          <span onClick={() => goToHomeNext(navigate, +params.number - + 30)}>&laquo;</span>
-          <span onClick={() => goToHomeNext(navigate, 1)}>1</span>
-          <span onClick={() => goToHomeNext(navigate, 30)}>2</span>
-          <span onClick={() => goToHomeNext(navigate, 60)}>3</span>
-          <span onClick={() => goToHomeNext(navigate, 90)}>4</span>
-          <span onClick={() => goToHomeNext(navigate, 120)}>5</span>
-          <span onClick={() => goToHomeNext(navigate, 150)}>6</span>
-          <span onClick={() => goToHomeNext(navigate, 180)}>7</span>
-          <span onClick={() => goToHomeNext(navigate, +params.number - + 30)}>&laquo;</span>
+    <HomeContainer> 
       <Titles>Todos Pokémons</Titles>
         <Card />
+        <ContainerPagination>
+          <a onClick={() => goToHomeNext(navigate, +params.number - +30)}>&lt;</a>
+          <a onClick={() => goToHomeNext(navigate, 1)}>1</a>
+          <a onClick={() => goToHomeNext(navigate, 30)}>2</a>
+          <a onClick={() => goToHomeNext(navigate, 60)}>3</a>
+          <a onClick={() => goToHomeNext(navigate, 90)}>4</a>
+          <a onClick={() => goToHomeNext(navigate, 120)}>5</a>
+          <a onClick={() => goToHomeNext(navigate, 150)}>6</a>
+          <a onClick={() => goToHomeNext(navigate, 180)}>7</a>
+          <a onClick={() => goToHomeNext(navigate, +params.number + +30)}>&gt;</a>
+          </ContainerPagination>
+     
 
 
        

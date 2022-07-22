@@ -8,15 +8,10 @@ import { ButtonDelete, PokedexContainer, Titles, CardsContainer } from './Pokede
 
 
 const PokedexPage = () => {
-  const { pokemonDetail, setPokemonDetail, pokedex, setPokedex} = useContext(GlobalContext)
+  const { pokedex, removePokemon} = useContext(GlobalContext)
 
     const navigate = useNavigate()
     
-    const removePokemon = (newPokemon, id) => {
-      setPokedex(pokedex.filter(pokemon => newPokemon.name !== pokemon.name))
-      setPokemonDetail([newPokemon, ...pokemonDetail])
-      localStorage.removeItem(`key ${id}`)
-    }
 
     const listPokedex = pokedex && pokedex.map((pokemon) => {
       if(localStorage.getItem(`key ${pokemon.id}`)) {

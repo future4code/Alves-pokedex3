@@ -1,21 +1,28 @@
 import React, {useContext} from 'react'
 import Logo from '../../assets/logo.png'
 import { ButtonBack, ButtonDel, ButtonPokedex, ContainerHeader, ImgLogo, Nav, NavList } from './HeaderStyled'
-import { goBack, goToPokedex, goToDetail, goToIndex } from '../../routes/coordinator'
+import { goBack, goToPokedex, goToIndex } from '../../routes/coordinator'
 import { useNavigate} from 'react-router-dom'
+import GlobalContext from '../../global/GlobalContext'
 
 const Header = () => {
 const navigate = useNavigate()
+const { removePokemon, capturPokemon, pokemonDetail } = useContext(GlobalContext)
+
 
     const defineButtonRight = () => {
 
-        if ((window.location.pathname === "/") || (window.location.pathname.includes("/1")) || (window.location.pathname.includes("/3")) || (window.location.pathname.includes("/6")) || (window.location.pathname.includes("/9")) )  {
+        if ((window.location.pathname === "/") || (window.location.pathname.includes("/1")) || (window.location.pathname.includes("/3")) || (window.location.pathname.includes("/6")) || (window.location.pathname.includes("/9")) || (window.location.pathname.includes("/0")) )  {
             return (
                 <ButtonPokedex onClick={() => goToPokedex(navigate)}> Pokedéx </ButtonPokedex>
             )
         } else if (window.location.pathname.includes("/pokedex/detail")) {
             return (
-                <ButtonDel>Excluir Pokemon</ButtonDel>
+                <ButtonDel onClick={() => {removePokemon(pokemonDetail, pokemonDetail.id)}} >Excluir Pokemon</ButtonDel>
+            )
+        } else if (window.location.pathname.includes("/detail")) {
+            return(
+                <button>Capturar</button>
             )
         }
     }
