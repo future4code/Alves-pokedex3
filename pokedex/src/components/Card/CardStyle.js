@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Background from '../../assets/background.png'
 
 export const ContainerCard = styled.section`
-    width: 27.5rem;
-    height: 13.125rem;
+    width: 27rem;
+    height: 13rem;
     background: ${props => props.typePokemon === "grass" && "#729F92;"};
     background: ${props => props.typePokemon === "fire" && "#EAAB7D;"};
     background: ${props => props.typePokemon === "water" && "#71C3FF;"};
@@ -30,8 +30,8 @@ export const ContainerCard = styled.section`
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    /* border: 1px red solid; */
-    margin: 3.313rem;
+    margin-top: 3.313rem;
+    margin-right:0.5rem;
 `
 export const H2 = styled.h2`
     font-size: 32px;

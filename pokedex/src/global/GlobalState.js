@@ -8,7 +8,7 @@ const GlobalState = (props) => {
 
     const [pokemonList, setPokemonList] = useState([])
     const [pokemonDetail, setPokemonDetail] = useState([])
-    const [pokedex, setPokedex] = useState()
+    const [pokedex, setPokedex] = useState([])
 
     const Provider = GlobalContext.Provider
 
@@ -40,7 +40,6 @@ const GlobalState = (props) => {
         newPokedex && setPokedex(newPokedex)
     },[])
 
-        
     const getPokeList = () => {
       axios.get(`${BASE_URL}/pokemon?limit=20&offset=0`)
       .then((res) => {

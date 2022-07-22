@@ -14,6 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     getPokemonsDetail()
   },[pokemonList])
+  
   useEffect(() => {
     getPokeList()
   },[])
