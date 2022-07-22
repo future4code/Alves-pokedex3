@@ -9,6 +9,13 @@ export const PokedexContainer = styled.div`
     padding: 0.5rem;
 `
 
+export const CardsContainer = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+`
+
 export const Titles = styled.h1`
     font-family: 'Poppins', sans-serif;
     font-weight: 700;

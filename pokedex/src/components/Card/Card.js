@@ -2,9 +2,8 @@ import React, { useContext, useState } from 'react'
 import GlobalContext from '../../global/GlobalContext'
 import { useNavigate } from 'react-router-dom'
 import { goToDetail } from '../../routes/coordinator'
-import { ButtonCaptur, ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard, } from './CardStyle'
+import { CardsContainer, ButtonCaptur, ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard, } from './CardStyle'
 import DefineTypes from '../DefineTypes'
-import { CardsContainer } from '../../pages/HomePage/HomePageStyled'
 
 const Card = () => {
 

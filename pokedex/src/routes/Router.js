@@ -11,8 +11,10 @@ const Router = () => {
             <Header />
             <Routes>
                 <Route index exact path="/" element={<HomePage />} />
+                <Route path=":number" element={<HomePage />}/>
                 <Route path="/detail/:name" element={<DetailPage />} />
                 <Route path="/pokedex" element={<PokedexPage />}/>
+                <Route path="/pokedex/detail/:name" element={<DetailPage />} />
                 <Route path="*"element={"Página não encontrada"}/>
             </Routes>
             {/* <Footer /> */}

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import { BASE_URL } from '../../constants/url'
 import axios from 'axios'
 import DefineTypes from '../../components/DefineTypes'
+import { ContainerDetail, ContainerPokemon, Titles } from './DetailPageStyled'
 
 const DetailPage = () => {
     const navigate = useNavigate()
@@ -13,12 +14,12 @@ const DetailPage = () => {
 
     const stats = pokeDetail.stats
     const types = pokeDetail.types
-    const moves = pokeDetail.moves
+    const moves = pokeDetail.abilities
 
   useEffect(() => {
     axios.get(`${BASE_URL}/pokemon/${params.name}`)
     .then((res) => {
-      console.log(res.data)
+      // console.log(res.data)
       setPokeDetail(res.data)
     })
     .catch((err) => {
@@ -26,10 +27,12 @@ const DetailPage = () => {
     })
   }, [params])
 
-
+  // console.log(types)
   return (
-    <div>
-      <div>
+    <ContainerDetail  >
+      <Titles>Detalhes</Titles>
+      <ContainerPokemon typePokemon={types && types[0].type && types[0].type.name}>
+           <div>
         <p>{pokeDetail.name}</p>
         {/* <img src={pokeDetail.sprites.other.front_default} alt={pokeDetail.name} /> */}
         <div>
@@ -51,14 +54,15 @@ const DetailPage = () => {
       </div>
       <div>
         {moves && moves.map((move) => {
-          const pokeMove = move.move.name
+          const pokeMove = move.ability.name
           return (
             <p>{pokeMove}</p>
           )
         })}
-        </div> 
-        <button onClick={() => goBack(navigate)}>Voltar</button>
-    </div>
+        </div>
+      </ContainerPokemon>
+    
+    </ContainerDetail>
   )
 }
 

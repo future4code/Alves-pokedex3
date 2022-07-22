@@ -33,6 +33,12 @@ export const ContainerCard = styled.section`
     margin-top: 3.313rem;
     margin-right:0.5rem;
 `
+export const CardsContainer = styled.section`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+`
 export const H2 = styled.h2`
     font-size: 32px;
     margin: 0;

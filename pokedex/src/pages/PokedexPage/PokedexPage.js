@@ -1,16 +1,14 @@
 import React, {useContext} from 'react'
 import GlobalContext from '../../global/GlobalContext'
 import {useNavigate} from 'react-router-dom'
-import { goBack, goToIndex } from '../../routes/coordinator'
 import { ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard } from '../../components/Card/CardStyle'
 import DefineTypes from '../../components/DefineTypes'
-import { goToDetail } from '../../routes/coordinator'
-import { ButtonDelete, PokedexContainer, Titles } from './PokedexPageStyled'
-import { CardsContainer } from '../../pages/HomePage/HomePageStyled'
+import { goToDetailPokedex } from '../../routes/coordinator'
+import { ButtonDelete, PokedexContainer, Titles, CardsContainer } from './PokedexPageStyled'
 
 
 const PokedexPage = () => {
-  const { pokemonList, setPokemonList, pokemonDetail, setPokemonDetail, pokedex, setPokedex} = useContext(GlobalContext)
+  const { pokemonDetail, setPokemonDetail, pokedex, setPokedex} = useContext(GlobalContext)
 
     const navigate = useNavigate()
     
@@ -35,7 +33,7 @@ const PokedexPage = () => {
                       )
                   })}
               </ContainerTypes>
-              <H3 onClick={() => goToDetail(navigate, pokemon.name)}>Detalhes</H3>
+              <H3 onClick={() => goToDetailPokedex(navigate, pokemon.name)}>Detalhes</H3>
           </ContainerFirstColumn>
           <ConatinerSecondColumn>
                   <ImgCard src={pokemon["sprites"]["other"]["official-artwork"]["front_default"]} />
