@@ -2,19 +2,36 @@ import styled from "styled-components";
 import Background from '../../assets/background.png'
 
 export const ContainerCard = styled.section`
-    width: 27.5rem;
-    height: 13.125rem;
+    width: 27rem;
+    height: 13rem;
+    background: ${props => props.typePokemon === "grass" && "#729F92;"};
+    background: ${props => props.typePokemon === "fire" && "#EAAB7D;"};
+    background: ${props => props.typePokemon === "water" && "#71C3FF;"};
+    background: ${props => props.typePokemon === "bug" && "#76A866"};
+    background: ${props => props.typePokemon === "normal" && "#BF9762;"};
+    background: ${props => props.typePokemon === "poison" && "#D1A3D0"};
+    background: ${props => props.typePokemon === "electric" && "#FFC95E"};
+    background: ${props => props.typePokemon === "ground" && "#B6866F"};
+    background: ${props => props.typePokemon === "fairy" && "#BD7886"};
+    background: ${props => props.typePokemon === "fighting" && "#B0385A"};
+    background: ${props => props.typePokemon === "psychic" && "#E05E65"};
+    background: ${props => props.typePokemon === "rock" && "#9E8F65"};
+    background: ${props => props.typePokemon === "ghost" && "#7084CA"};
+    background: ${props => props.typePokemon === "ice" && "#48A497"};
+    background: ${props => props.typePokemon === "dragon" && "#004170;"};
+    background: ${props => props.typePokemon === "steel" && "#B7B9D0"};
+    background: ${props => props.typePokemon === "dark" && "#55433C"};
+    background: ${props => props.typePokemon === "flying" && "#A891EC"};
     background-image: url(${Background});
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 7.813rem;
-    background-color: #729F92;
     border-radius: 12px;
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    /* border: 1px red solid; */
-    margin: 3.313rem;
+    margin-top: 3.313rem;
+    margin-right:0.5rem;
 `
 export const H2 = styled.h2`
     font-size: 32px;

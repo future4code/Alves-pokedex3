@@ -13,6 +13,7 @@ export const Titles = styled.h1`
 
 export const CardsContainer = styled.section`
     display: flex;
-    /* flex-direction: row; */
     flex-wrap: wrap;
+    justify-content: space-around;
+
 `
