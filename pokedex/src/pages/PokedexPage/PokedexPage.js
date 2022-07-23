@@ -1,10 +1,11 @@
 import React, {useContext} from 'react'
 import GlobalContext from '../../global/GlobalContext'
 import {useNavigate} from 'react-router-dom'
-import { ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard } from '../../components/Card/CardStyle'
+import { ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, H3Details, ImgCard } from '../../components/Card/CardStyle'
 import DefineTypes from '../../components/DefineTypes'
 import { goToDetailPokedex } from '../../routes/coordinator'
-import { ButtonDelete, PokedexContainer, Titles, CardsContainer } from './PokedexPageStyled'
+import { ButtonDelete, PokedexContainer, Titles, CardsContainer, GifAsh } from './PokedexPageStyled'
+import SadAsh from '../../assets/sadAsh.gif'
 
 
 const PokedexPage = () => {
@@ -28,7 +29,7 @@ const PokedexPage = () => {
                       )
                   })}
               </ContainerTypes>
-              <H3 onClick={() => goToDetailPokedex(navigate, pokemon.name)}>Detalhes</H3>
+              <H3Details onClick={() => goToDetailPokedex(navigate, pokemon.name)}>Detalhes</H3Details>
           </ContainerFirstColumn>
           <ConatinerSecondColumn>
                   <ImgCard src={pokemon["sprites"]["other"]["official-artwork"]["front_default"]} />
@@ -36,8 +37,6 @@ const PokedexPage = () => {
           </ConatinerSecondColumn>
       </ContainerCard>
         )
-      }else {
-        <p>Não há pokemon</p>
       }
     })
     

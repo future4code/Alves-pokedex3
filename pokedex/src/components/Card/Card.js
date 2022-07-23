@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import GlobalContext from '../../global/GlobalContext'
 import { useNavigate } from 'react-router-dom'
 import { goToDetail } from '../../routes/coordinator'
-import { CardsContainer, ButtonCaptur, ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard, } from './CardStyle'
+import { CardsContainer, ButtonCaptur, ConatinerSecondColumn, ContainerCard, ContainerFirstColumn, ContainerTypes, H2, H3, ImgCard, H3Details, } from './CardStyle'
 import DefineTypes from '../DefineTypes'
 
 const Card = () => {
@@ -31,7 +31,7 @@ const Card = () => {
                                 )
                             })}
                         </ContainerTypes>
-                        <H3 onClick={() => goToDetail(navigate, pokemon.name)}>Detalhes</H3>
+                        <H3Details onClick={() => goToDetail(navigate, pokemon.name)}>Detalhes</H3Details>
                     </ContainerFirstColumn>
                     <ConatinerSecondColumn>
                         <ImgCard src={pokemon["sprites"]["other"]["official-artwork"]["front_default"]} />

@@ -1,23 +1,22 @@
-# Getting Started with Create React App
+# LinkSurge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Iniciando projeto
 
-### `npm start`
+Começamos primeiramente fazendo a pagina de Router e Coordinator.
+Em seguida tiramos algum tempo para estudar a API e ver seu funcionamento.
+Com isso fizemos 3 páginas a PokeList, a Pokedex e os detalhes do Pokemon.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Meio do projeto
+Após temos estudado a API começamos a fazer as páginas e inicial, fizemos um Header para todas as páginas e nele colocamos algumas funções para ele modificar os botões dependendo dela. 
+Também fizemos uma função para cada Tipo de Pokemon, como as cores do Card, fizemos a função de capturar e excluir Pokemon em todas as páginas, sendo que quando se vai de detalhes da Pokelist tem um botão capturar e na Pokedex existe o botão Deletar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Finalização do Projeto
+Estilizamos então as 3 páginas com base no FIGMA, com isso conseguirmos concluir boa parte do projeto igual aquele que foi colocado lá no figma, fazendo 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
 
 ### `npm run build`
 

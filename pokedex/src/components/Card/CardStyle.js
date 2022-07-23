@@ -42,10 +42,21 @@ export const CardsContainer = styled.section`
 export const H2 = styled.h2`
     font-size: 32px;
     margin: 0;
+    color: #FFFFFF;
+
 `
 export const H3 = styled.h3`
     font-size: 16px;
     margin: 0;
+    color: #FFFFFF;
+`
+export const H3Details = styled.h3`
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+
 `
 
 export const ImgCard = styled.img`
@@ -85,13 +96,18 @@ export const ButtonCaptur = styled.button`
     font-size: 16px;
     cursor: pointer;
     margin-left: 1.56rem;
+    align-self: center ;
+    :hover{
+        background-color: #FF6262;
+        color: #FFFFFF;
+    }
 
 `
 
 export const ImgType = styled.img`
     width: 6.25rem;
     height: 1.938rem;
-    margin-right: 02.rem;
+    margin-right: 0.02rem;
     
 `
 export const ContainerTypes = styled.section`

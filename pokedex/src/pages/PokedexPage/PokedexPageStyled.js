@@ -4,9 +4,11 @@ export const PokedexContainer = styled.div`
     background-color: #5E5E5E;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     padding: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
 `
 
 export const CardsContainer = styled.section`
@@ -34,4 +36,16 @@ export const ButtonDelete = styled.button`
     font-size: 16px;
     font-weight: 400;
     color: #FFFFFF;
+    align-self: center ;
+    cursor: pointer;
+    :hover{
+        background-color: #FFFFFF;
+        color: black;
+    }
+`
+
+export const GifAsh = styled.img`
+    background-repeat: no-repeat;
+    width: 50%;
+    border-radius: 50%;
 `
