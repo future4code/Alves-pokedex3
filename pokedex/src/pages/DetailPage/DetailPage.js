@@ -79,7 +79,7 @@ const DetailPage = () => {
           </div>
           </ContainerInfos>
           <ContainerMoves>
-            <p>Ataques:</p>
+            <p>Habilidades:</p>
             {moves && moves.map((move) => {
               const pokeMove = move.ability.name
               return (
