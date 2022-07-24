@@ -32,6 +32,10 @@ export const ContainerCard = styled.section`
     display: flex;
     margin-top: 3.313rem;
     margin-right:0.5rem;
+    @media (max-width: 480px) {
+        width: 20rem;
+        height: 13rem;
+    }
 `
 export const CardsContainer = styled.section`
     display: flex;
@@ -43,7 +47,9 @@ export const H2 = styled.h2`
     font-size: 32px;
     margin: 0;
     color: #FFFFFF;
-
+    @media (max-width: 480px) {
+        font-size: 24px;
+    }
 `
 export const H3 = styled.h3`
     font-size: 16px;
@@ -56,7 +62,6 @@ export const H3Details = styled.h3`
     cursor: pointer;
     text-decoration-line: underline;
     color: #FFFFFF;
-
 `
 
 export const ImgCard = styled.img`
@@ -65,6 +70,10 @@ export const ImgCard = styled.img`
     left: 17.813rem;
     top: 34.625rem;
     margin-bottom: 1.56rem;
+    @media (max-width: 480px) {
+        width: 7rem;
+        height: 7rem;
+    }
 `
 
 export const ContainerFirstColumn = styled.section`
@@ -101,16 +110,22 @@ export const ButtonCaptur = styled.button`
         background-color: #FF6262;
         color: #FFFFFF;
     }
-
+    @media (max-width: 480px) {
+        width: 5rem;
+        height: 2rem;
+        font-size: 14px;
+    }
 `
 
 export const ImgType = styled.img`
     width: 6.25rem;
     height: 1.938rem;
     margin-right: 0.02rem;
-    
+    @media (max-width: 480px) {
+        width: 5rem;
+        height: 1.938rem;
+    }
 `
 export const ContainerTypes = styled.section`
     display: flex;
-
 `

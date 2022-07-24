@@ -7,22 +7,21 @@ export const PokedexContainer = styled.div`
     height: 100vh;
     width: 100%;
     padding: 0.5rem;
-    margin-right: auto;
-    margin-left: auto;
+    @media (max-width: 480px) {
+        height: 100%;
+    }
 `
 
 export const CardsContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 `
 
 export const Titles = styled.h1`
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #FFFFFF;
-
 `
 
 export const ButtonDelete = styled.button`
@@ -36,16 +35,9 @@ export const ButtonDelete = styled.button`
     font-size: 16px;
     font-weight: 400;
     color: #FFFFFF;
-    align-self: center ;
-    cursor: pointer;
-    :hover{
-        background-color: #FFFFFF;
-        color: black;
+    @media (max-width: 480px) {
+        width: 5rem;
+        height: 2rem;
+        font-size: 14px;
     }
-`
-
-export const GifAsh = styled.img`
-    background-repeat: no-repeat;
-    width: 50%;
-    border-radius: 50%;
 `

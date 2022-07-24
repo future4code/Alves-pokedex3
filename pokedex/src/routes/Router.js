@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import DetailPage from '../pages/DetailPage/DetailPage'
 import PokedexPage from '../pages/PokedexPage/PokedexPage'
 import HomePage from '../pages/HomePage/HomePage'
-// import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 
 const Router = () => {
@@ -11,13 +10,12 @@ const Router = () => {
             <Header />
             <Routes>
                 <Route index exact path="/" element={<HomePage />} />
-                <Route path=":number" element={<HomePage />}/>
+                <Route path=":number" element={<HomePage />} />
                 <Route path="/detail/:name" element={<DetailPage />} />
-                <Route path="/pokedex" element={<PokedexPage />}/>
+                <Route path="/pokedex" element={<PokedexPage />} />
                 <Route path="/pokedex/detail/:name" element={<DetailPage />} />
-                <Route path="*"element={"Página não encontrada"}/>
+                <Route path="*" element={"Página não encontrada"} />
             </Routes>
-            {/* <Footer /> */}
         </BrowserRouter>
     )
 }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Background from '../../assets/background.png'
 
-
 export const ContainerDetail = styled.section`
     background-color: #5E5E5E;
     display: flex;
@@ -46,15 +45,20 @@ export const ContainerPokemon = styled.section`
     background-size: 55%;
     background-repeat: no-repeat;
     background-position: 58.5rem;
+    @media (max-width: 480px) {
+        height: 100%;
+        width: 100%;
+        flex-wrap: wrap;
+    }
 `
-
 export const BigContainerSmall = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
+    @media (max-width: 480px) {
+        display: none;
+    }
 `
-
 export const ContainerImgSmall = styled.section`
     width: 17.625rem;
     height: 17.625rem;
@@ -63,11 +67,17 @@ export const ContainerImgSmall = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 480px) {
+       display: none;
+    }
 `
 
 export const ImgSmall = styled.img`
     width: 8rem;
     height: 8rem;
+    @media (max-width: 480px) {
+        display: none;
+    }
 `
 
 export const ContainerStats = styled.section`
@@ -77,17 +87,32 @@ export const ContainerStats = styled.section`
     height: 38.313rem;
     background-color: #FFFFFF;
     border-radius: 8px;
+    p{
+        font-size: 24px;
+        font-weight: 800;
+        @media (max-width: 480px) {
+            font-size: 14px;
+    }
+    }
+    @media (max-width: 480px) {
+        width: 90%;
+        height: 20rem;
+    }
 `
 
 export const ContainerData = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 `
 export const H2 = styled.h2`
     font-size: 48px;
     margin: 0;
     color: #FFFFFF;
+    @media (max-width: 480px) {
+        font-size: 20px;
+    }
 `
 export const H3 = styled.h3`
     font-size: 16px;
@@ -108,6 +133,13 @@ export const ContainerMoves = styled.section`
     p{
         font-size: 24px;
         font-weight: 800;
+        @media (max-width: 480px) {
+            font-size: 14px;
+    }
+    }
+    @media (max-width: 480px) {
+        width: 8rem;
+        height: 14rem;
     }
 `
 
@@ -120,8 +152,6 @@ export const Moves = styled.section`
     line-height: 17px;
     font-weight: 400;
     margin-bottom: 1.25rem;
-    /* display: inline-block; */
-
 `
 export const ContainerImgBig = styled.section`
     height: 48rem;
@@ -130,12 +160,21 @@ export const ContainerImgBig = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    @media (max-width: 480px) {
+        width: 10rem;
+        height: 8rem;
+        font-size: 14px;
+        flex-direction: row;
+        align-self: flex-start;
+    }
 `
 export const ImgBig = styled.img`
     width: 16.875rem;
     height: 16.875rem;
-    
+    @media (max-width: 480px) {
+        width: 5rem;
+        height: 5rem;
+    }
 `
 export const ButtonCaptur = styled.button`
     border-radius: 8px;
@@ -152,6 +191,11 @@ export const ButtonCaptur = styled.button`
     :hover {
         background-color: #FF6262;
         color: #FFFFFF;
+    }
+    @media (max-width: 480px) {
+        width: 5rem;
+        height: 1.5rem;
+        font-size: 10px;
     }
 
 `
@@ -172,5 +216,42 @@ export const ButtonDelete = styled.button`
         background-color: #FFFFFF;
         color: #0F0F0F;
     }
+    @media (max-width: 480px) {
+        width: 5rem;
+        height: 1.5rem;
+        font-size: 10px;
+    }
 
+`
+export const ContainerProgress = styled.section`
+display: flex;
+align-items: center;
+margin-left: auto;
+margin-right:auto;
+    h3{
+        font-size: 24px;
+        font-weight: 800;
+        @media (max-width: 480px) {
+        font-size: 10px;
+    }
+
+    }
+    p {
+        color: gray;
+        font-size: 16px;
+        font-weight: 400;
+        @media (max-width: 480px) {
+        font-size: 10px;
+    }
+
+    }
+`
+
+export const Progress = styled.progress`
+    height: 1rem;
+    background-color: #FF6262;
+    margin-left: 1rem;
+    @media (max-width: 480px) {
+        height: 0.5rem;
+    }
 `
