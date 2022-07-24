@@ -1,5 +1,6 @@
 # LinkSurge
 
+alves-pokedex3.surge.sh
 
 
 ## Iniciando projeto
@@ -17,10 +18,6 @@ Também fizemos uma função para cada Tipo de Pokemon, como as cores do Card, f
 Estilizamos então as 3 páginas com base no FIGMA, com isso conseguirmos concluir boa parte do projeto igual aquele que foi colocado lá no figma, fazendo responsividade em todas páginas do projeto, também fizemos a paginação até a página 7 que vai até os 180 Pokemons, a partir dela você pode seguir para outras páginas pela > pro lado. 
 
 Por fim colocamos um Toast na página mostrando o que foi adicionado na Pokebola e semelhante. 
-
-
-
-
 
 ### Principais Dificuldades
 

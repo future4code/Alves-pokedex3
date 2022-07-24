@@ -16,14 +16,12 @@ export const CardsContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 `
 
 export const Titles = styled.h1`
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #FFFFFF;
-
 `
 
 export const ButtonDelete = styled.button`

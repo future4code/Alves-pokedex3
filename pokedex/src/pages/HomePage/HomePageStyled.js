@@ -13,13 +13,11 @@ export const Titles = styled.h1`
     font-weight: 700;
     color: #FFFFFF;
 `
-
 export const CardsContainer = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 `
-
 export const ContainerPagination = styled.section`
     display: flex;
     font-size: 24px;
@@ -29,7 +27,6 @@ export const ContainerPagination = styled.section`
     @media (max-width: 480px) {
         align-self: center;
     }
-
     a{
     padding: 1rem;
     border: 1px solid gray;
@@ -37,7 +34,6 @@ export const ContainerPagination = styled.section`
     @media (max-width: 480px) {
         padding: 0.2rem;
     }
-
     }
     a:hover {
         background-color: #4CAF50;

@@ -50,7 +50,6 @@ export const H2 = styled.h2`
     @media (max-width: 480px) {
         font-size: 24px;
     }
-
 `
 export const H3 = styled.h3`
     font-size: 16px;
@@ -63,7 +62,6 @@ export const H3Details = styled.h3`
     cursor: pointer;
     text-decoration-line: underline;
     color: #FFFFFF;
-
 `
 
 export const ImgCard = styled.img`
@@ -127,9 +125,7 @@ export const ImgType = styled.img`
         width: 5rem;
         height: 1.938rem;
     }
-    
 `
 export const ContainerTypes = styled.section`
     display: flex;
-
 `

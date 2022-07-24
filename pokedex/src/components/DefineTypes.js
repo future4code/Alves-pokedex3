@@ -17,7 +17,6 @@ import Poison from '../assets/poison.png'
 import Rock from '../assets/rock.png'
 import Steel from '../assets/steel.png'
 import Water from '../assets/water.png'
-
 import { ImgType } from './Card/CardStyle'
 const DefineTypes = ({ pokemonType }) => {
 

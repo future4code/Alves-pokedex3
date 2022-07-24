@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Background from '../../assets/background.png'
 
-
 export const ContainerDetail = styled.section`
     background-color: #5E5E5E;
     display: flex;
@@ -16,11 +15,9 @@ export const Titles = styled.h1`
     color: #FFFFFF;
     align-self: flex-start;
     margin-left: 1.563rem;
-    
 `
 export const ContainerPokemon = styled.section`
     display: flex;
-    flex-wrap: wrap;
     width: calc(100% - 1.563rem);
     height: 41rem;
     border-radius: 12px;
@@ -51,9 +48,9 @@ export const ContainerPokemon = styled.section`
     @media (max-width: 480px) {
         height: 100%;
         width: 100%;
+        flex-wrap: wrap;
     }
 `
-
 export const BigContainerSmall = styled.section`
     display: flex;
     flex-direction: column;
@@ -61,9 +58,7 @@ export const BigContainerSmall = styled.section`
     @media (max-width: 480px) {
         display: none;
     }
-
 `
-
 export const ContainerImgSmall = styled.section`
     width: 17.625rem;
     height: 17.625rem;
@@ -109,10 +104,6 @@ export const ContainerData = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @media (max-width: 480px) {
-        /* flex-direction: row; */
-        
-    }
 
 `
 export const H2 = styled.h2`
@@ -121,7 +112,6 @@ export const H2 = styled.h2`
     color: #FFFFFF;
     @media (max-width: 480px) {
         font-size: 20px;
-        
     }
 `
 export const H3 = styled.h3`
@@ -133,7 +123,6 @@ export const H3 = styled.h3`
 export const ContainerInfos = styled.section`
     display: flex;
     flex-direction: column;
-  
 `
 
 export const ContainerMoves = styled.section`
@@ -163,7 +152,6 @@ export const Moves = styled.section`
     line-height: 17px;
     font-weight: 400;
     margin-bottom: 1.25rem;
-
 `
 export const ContainerImgBig = styled.section`
     height: 48rem;
@@ -179,7 +167,6 @@ export const ContainerImgBig = styled.section`
         flex-direction: row;
         align-self: flex-start;
     }
-
 `
 export const ImgBig = styled.img`
     width: 16.875rem;
@@ -188,7 +175,6 @@ export const ImgBig = styled.img`
         width: 5rem;
         height: 5rem;
     }
-    
 `
 export const ButtonCaptur = styled.button`
     border-radius: 8px;
@@ -268,6 +254,4 @@ export const Progress = styled.progress`
     @media (max-width: 480px) {
         height: 0.5rem;
     }
-
-    
 `
