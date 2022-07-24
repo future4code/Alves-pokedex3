@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# LinkSurge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Iniciando projeto
 
-### `npm start`
+Começamos primeiramente fazendo a pagina de Router e Coordinator.
+Em seguida tiramos algum tempo para estudar a API e ver seu funcionamento.
+Com isso fizemos 3 páginas a PokeList, a Pokedex e os detalhes do Pokemon.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Meio do projeto
+Após temos estudado a API começamos a fazer as páginas e inicial, fizemos um Header para todas as páginas e nele colocamos algumas funções para ele modificar os botões dependendo dela. 
+Também fizemos uma função para cada Tipo de Pokemon, como as cores do Card, fizemos a função de capturar e excluir Pokemon em todas as páginas, sendo que quando se vai de detalhes da Pokelist tem um botão capturar e na Pokedex existe o botão Deletar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Finalização do Projeto
+Estilizamos então as 3 páginas com base no FIGMA, com isso conseguirmos concluir boa parte do projeto igual aquele que foi colocado lá no figma, fazendo responsividade em todas páginas do projeto, também fizemos a paginação até a página 7 que vai até os 180 Pokemons, a partir dela você pode seguir para outras páginas pela > pro lado. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Por fim colocamos um Toast na página mostrando o que foi adicionado na Pokebola e semelhante. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Principais Dificuldades
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Tivemos bastante dificuldade e até mudamos da ideia de fazer o botão do Header ter uma função de apagar e capturar, então passamos ela diretamente para os detalhes, tivemos também dificuldade dela migrar quando captura da tela detalhes e apagar pra fora dela.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### O que funciona
+Capturar Pokemon
+Ver os detalhes dos Pokemons e seus ataques básicos
+Deletar Pokemons da sua Pokedex tanto nos detalhes quanto na própria Pokedex
+Pokemons na Pokedex possuem animação
+Toast quando captura ou apaga 
+Navigate entre as páginas e mudança no Header sem ter um header em cada componente
+Mudança de cor dos cards e tipos dependendo do tipo do Pokemon.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Note: O que não funciona**
+Botão de apagar no Header que apagamos 
+Batalha Pokemon
+Voltar após a apagar do detalhes 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

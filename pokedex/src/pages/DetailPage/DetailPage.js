@@ -1,14 +1,16 @@
 
 import { useNavigate, useParams } from 'react-router-dom'
 import { goBack } from '../../routes/coordinator'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { BASE_URL } from '../../constants/url'
 import axios from 'axios'
 import DefineTypes from '../../components/DefineTypes'
-import { BigContainerSmall, ContainerDetail, ContainerImgSmall, ContainerPokemon, ContainerStats, ImgSmall, Titles } from './DetailPageStyled'
+import GlobalContext from '../../global/GlobalContext'
+import { ImgBig, H3, H2, BigContainerSmall, ContainerData, ContainerDetail, ContainerImgSmall, ContainerPokemon, ContainerStats, ImgSmall, Titles, ContainerMoves, Moves, ContainerImgBig, ContainerInfos, ButtonCaptur, ButtonDelete } from './DetailPageStyled'
 
 const DetailPage = () => {
   const navigate = useNavigate()
+  const { removePokemon, capturPokemon } = useContext(GlobalContext)
   const params = useParams()
   const [pokeDetail, setPokeDetail] = useState({})
 
@@ -16,11 +18,11 @@ const DetailPage = () => {
   const types = pokeDetail.types
   const moves = pokeDetail.abilities
   const images = pokeDetail.sprites?.versions["generation-v"]["black-white"].animated
+  const imagesBig = pokeDetail.sprites?.other["official-artwork"]["front_default"]
 
   useEffect(() => {
     axios.get(`${BASE_URL}/pokemon/${params.name}`)
       .then((res) => {
-        // console.log(res.data)
         setPokeDetail(res.data)
       })
       .catch((err) => {
@@ -28,7 +30,18 @@ const DetailPage = () => {
       })
   }, [params])
 
-  console.log(pokeDetail)
+  const defineButton = () => {
+    if (window.location.pathname.includes("/pokedex/detail")){
+      return (
+        <ButtonDelete onClick = {() => {removePokemon(pokeDetail, pokeDetail.id)}}> Deletar </ButtonDelete>
+    )
+    }else if (window.location.pathname.includes("/detail")) {
+      return (
+        <ButtonCaptur  onClick = {() => {capturPokemon(pokeDetail, pokeDetail.id)}} > Capturar </ButtonCaptur>
+       
+    )
+    }
+  }
   return (
     <ContainerDetail  >
       <Titles>Detalhes</Titles>
@@ -43,7 +56,7 @@ const DetailPage = () => {
           </ContainerImgSmall>
         </BigContainerSmall>
         <ContainerStats>
-          <p>Experiencia: {pokeDetail.base_experience}</p>
+          <p>Experiência: {pokeDetail.base_experience}</p>
           {stats && stats.map((status) => {
             return (
               <p key={status.stat.name}>
@@ -52,9 +65,10 @@ const DetailPage = () => {
             )
           })}
         </ContainerStats>
-        <div>
-          <p>#{pokeDetail.id}</p>
-          <p>{pokeDetail.name}</p>
+        <ContainerData>
+          <ContainerInfos>
+          <H3 >#{pokeDetail.id}</H3>
+          <H2>{pokeDetail.name}</H2>
           <div>
             {types && types.map((type) => {
               const pokemonType = type.type.name
@@ -63,19 +77,22 @@ const DetailPage = () => {
               )
             })}
           </div>
-
-
-        </div>
-        <div>
-          {moves && moves.map((move) => {
-            const pokeMove = move.ability.name
-            return (
-              <p>{pokeMove}</p>
-            )
-          })}
-        </div>
+          </ContainerInfos>
+          <ContainerMoves>
+            <p>Habilidades:</p>
+            {moves && moves.map((move) => {
+              const pokeMove = move.ability.name
+              return (
+                <Moves>{pokeMove}</Moves>
+              )
+            })}
+          </ContainerMoves>
+        </ContainerData>
+        <ContainerImgBig>
+          <ImgBig src={imagesBig && imagesBig} />
+          {defineButton()}
+        </ContainerImgBig>
       </ContainerPokemon>
-
     </ContainerDetail>
   )
 }
