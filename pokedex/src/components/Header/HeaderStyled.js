@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const ContainerHeader = styled.section`
-    width: 100%;
+    width: 100vw;
     height: 10rem;
     display: flex;
     align-items: center;
+    @media (max-width: 480px) {
+        height: 5rem;
+    }
 `
 
 export const Nav = styled.nav`
@@ -31,6 +34,11 @@ export const ImgLogo = styled.img`
     width: 19.188rem;
     height: 7.06rem;
     cursor: pointer;
+    @media (max-width: 480px) {
+        width: 8rem;
+        height: 4rem;
+    }
+
 `
 export const ButtonPokedex = styled.button `
     font-family: 'Poppins', sans-serif;
@@ -45,6 +53,11 @@ export const ButtonPokedex = styled.button `
     width: 17.938rem;
     height: 4.625rem;
     cursor: pointer;
+    @media (max-width: 480px) {
+        width: 7rem;
+        height: 3rem;
+        font-size: 18px;
+    }
 `
 export const ButtonBack = styled.button`
     font-weight: 700;

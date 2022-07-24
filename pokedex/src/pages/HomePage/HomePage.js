@@ -34,7 +34,7 @@ const HomePage = () => {
           <a onClick={() => goToHomeNext(navigate, 120)}>5</a>
           <a onClick={() => goToHomeNext(navigate, 150)}>6</a>
           <a onClick={() => goToHomeNext(navigate, 180)}>7</a>
-          <a onClick={() => goToHomeNext(navigate, +params.number + +30)}>... &gt;</a>
+          <a onClick={() => goToHomeNext(navigate, +params.number + +30)}>&gt;</a>
           </ContainerPagination>
     </HomeContainer>
     

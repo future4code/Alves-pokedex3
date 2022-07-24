@@ -6,7 +6,7 @@ import { BASE_URL } from '../../constants/url'
 import axios from 'axios'
 import DefineTypes from '../../components/DefineTypes'
 import GlobalContext from '../../global/GlobalContext'
-import { ImgBig, H3, H2, BigContainerSmall, ContainerData, ContainerDetail, ContainerImgSmall, ContainerPokemon, ContainerStats, ImgSmall, Titles, ContainerMoves, Moves, ContainerImgBig, ContainerInfos, ButtonCaptur, ButtonDelete } from './DetailPageStyled'
+import { ImgBig, H3, H2, BigContainerSmall, ContainerData, ContainerDetail, ContainerImgSmall, ContainerPokemon, ContainerStats, ImgSmall, Titles, ContainerMoves, Moves, ContainerImgBig, ContainerInfos, ButtonCaptur, ButtonDelete, ContainerProgress, Progress } from './DetailPageStyled'
 
 const DetailPage = () => {
   const navigate = useNavigate()
@@ -24,6 +24,7 @@ const DetailPage = () => {
     axios.get(`${BASE_URL}/pokemon/${params.name}`)
       .then((res) => {
         setPokeDetail(res.data)
+        console.log(res.data)
       })
       .catch((err) => {
         console.log(err.response)
@@ -56,14 +57,17 @@ const DetailPage = () => {
           </ContainerImgSmall>
         </BigContainerSmall>
         <ContainerStats>
-          <p>Experiência: {pokeDetail.base_experience}</p>
+          <p>Experiência:</p>
           {stats && stats.map((status) => {
             return (
-              <p key={status.stat.name}>
-                {status.stat.name}: {status.base_stat}
-              </p>
+              <ContainerProgress>
+               <p>{status.stat.name} {status.base_stat} </p>  
+              <Progress max={200} value={status.base_stat} key={status.stat.name}></Progress>
+                </ContainerProgress>
+            
             )
           })}
+          <p>total = { stats && stats[0]?.base_stat + stats[1]?.base_stat + stats[2]?.base_stat + stats[3]?.base_stat + stats[4]?.base_stat + stats[5]?.base_stat}</p>
         </ContainerStats>
         <ContainerData>
           <ContainerInfos>

@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react'
 // import useRequestData from '../hooks/useRequestData'
 import GlobalContext from './GlobalContext'
 import { BASE_URL } from '../constants/url'
+import Capturar from '../assets/capturar.png'
+import Soltar from '../assets/soltar.gif'
 import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const GlobalState = (props) => {
 
@@ -58,12 +62,18 @@ const GlobalState = (props) => {
         setPokedex(newPokedex)
         localStorage.setItem(`key ${id}`, id)
         localStorage.setItem("pokedex", JSON.stringify(newPokedex))
+        toast("Capturou!", {
+            icon: <img  src={Capturar} height='25px' width='25px' />
+        })
     }
 
     const removePokemon = (newPokemon, id) => {
         setPokedex(pokedex.filter(pokemon => newPokemon.name !== pokemon.name))
         setPokemonDetail([newPokemon, ...pokemonDetail])
         localStorage.removeItem(`key ${id}`)
+        toast.error("O Pokemon foi retirado da sua Pokedex", {
+            icon: <img  src={Soltar} height='30px' width='30px' />
+        })
     }
 
     const values = {
