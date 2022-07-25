@@ -1,11 +1,11 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Lucas Magalhães
+- Raquel Burger
+- João Pedro Paiva
 
-Link do Surge: www.link.com.br
+Link do Surge: http://alves-pokedex3.surge.sh/
 
 O que funciona:
 - Item 1
