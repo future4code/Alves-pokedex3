@@ -1,12 +1,6 @@
-# POKEDEX
+# LinkSurge
 
-Nome dos integrantes: 
-- Lucas Magalhães
-- Raquel Burger
-- João Pedro Paiva
-
-Link do Surge: http://alves-pokedex3.surge.sh/
-
+alves-pokedex3.surge.sh
 
 
 ## Iniciando projeto
